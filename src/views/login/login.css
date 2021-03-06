@@ -1,0 +1,27 @@
+form {
+    width: 300px;
+    height: 260px;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    margin: 200px auto;
+
+}
+
+form div {
+    margin: 20px 20px 20px -60px;
+}
+
+.btn {
+    padding: 5px 25px;
+    margin-right: 5px;
+}
+
+h3 {
+    color: #666;
+}
+
+.login,
+.logon {
+    color: #3A43E8;
+}

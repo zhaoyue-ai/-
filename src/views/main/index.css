@@ -1,0 +1,267 @@
+:root {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'pingfang';
+    background-color: #eee;
+}
+
+.header {
+    height: 70px;
+    line-height: 70px;
+    background: #2E3F78;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./bg.png);
+}
+
+.header .logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 30px;
+    color: #fff;
+}
+
+.header .logo img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.header .logo span {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 4px 2px 6px #ccc;
+    animation: jumping .7s infinite alternate;
+}
+
+.header .logo span:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.header .logo span:nth-of-type(2) {
+    animation-delay: 0.25s;
+}
+
+.header .logo span:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+.header .logo span:nth-of-type(4) {
+    animation-delay: 0.75s;
+}
+
+
+
+@keyframes jumping {
+    0% {
+        transform: translateY(10px);
+        text-shadow: 4px 0px 6px #2E3F78;
+
+    }
+
+    100% {
+        transform: translateY(-10px);
+        text-shadow: 4px 4px 6px #2E3F78;
+        opacity: .8;
+    }
+}
+
+.header .user {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+    color: #fff;
+}
+
+.header .user img {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+
+.header .user li {
+    padding: 0 20px;
+}
+
+.header .logout {
+    color: #fff;
+}
+
+.left-menu {
+    width: 200px;
+    background: #fff;
+    height: calc(100% - 70px);
+    /* margin-top: 70px; */
+    position: fixed;
+    top: 70px;
+    line-height: 40px;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.left-menu dt {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.left-menu dd {
+    /* background-color: #fff; */
+    padding-left: 40px;
+    cursor: pointer;
+    margin-bottom: 1px;
+    color: #000;
+}
+
+.left-menu dd.active,
+.left-menu dd:hover {
+    /* opacity: .5; */
+    /* color: blue; */
+    background-color: #ddd;
+    transition: all 0.3s ease-in-out;
+    /* opacity: .5; */
+    color: #000;
+}
+
+.right-content {
+    margin-top: 70px;
+    margin-left: 200px;
+    background-color: #eee;
+    position: relative;
+}
+
+#student-list {
+    width: 100%;
+    /* display: none; */
+}
+
+#student-list table {
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+
+table thead {
+    background-color: #e3e8ee;
+    color: #646987;
+}
+
+table tbody {
+    background-color: #fff;
+}
+
+table .btn {
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 3px 10px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+table .btn.edit {
+    background-color: #2E3F78;
+
+}
+
+table .btn.remove {
+    background-color: #FC3A2F;
+
+}
+
+#student-add {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    /* display: none; */
+}
+
+#add-student-form,
+#edit-student-form {
+    width: 400px;
+    margin: 50px auto;
+}
+
+form {
+    font-size: 16px;
+}
+
+form label:not(.sex) {
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+form .btn {
+    padding: 5px 25px;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* display: none; */
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-content {
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 20px;
+}
